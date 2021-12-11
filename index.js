@@ -21,11 +21,10 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 async function run() {
     try {
         await client.connect();
-        const database = client.db("dhoom");
-        const reviewsCollection = database.collection("reviews");
+        const database = client.db("fullstack1");
+        const usersCollection = database.collection("users");
         const bikesCollection = database.collection("bikes");
         const allOrdersCollection = database.collection("allOrders");
-        const usersCollection = database.collection("users");
 
 
         // USERS API HANDLING //
