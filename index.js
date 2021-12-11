@@ -33,13 +33,13 @@ async function run() {
             res.send(users);
         })
 
-        // // POSTING USER
-        // app.post('/users', async (req, res) => {
-        //     const user = req.body;
-        //     const result = await usersCollection.insertOne(user);
-        //     console.log(result);
-        //     res.json(result);
-        // });
+        // POSTING USER
+        app.post('/users', async (req, res) => {
+            const user = req.body;
+            const result = await usersCollection.insertOne(user);
+            console.log(user);
+            res.json(result);
+        });
         // // CHECKING ADMIN
         // app.get('/users/:email', async (req, res) => {
         //     const email = req.params.email;
